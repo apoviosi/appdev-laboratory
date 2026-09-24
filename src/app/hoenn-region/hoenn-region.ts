@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { HoennService } from '../services/hoenn';
 
 @Component({
-  imports: [],
   selector: 'app-hoenn-region',
-  styleUrl: './hoenn-region.css',
+  standalone: true,
   templateUrl: './hoenn-region.html',
+  styleUrls: ['./hoenn-region.css']
 })
-export class HoennRegion {}
+export class HoennRegionComponent {
+  hoennService = inject(HoennService);
+}
