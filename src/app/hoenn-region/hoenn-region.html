@@ -1,1 +1,19 @@
-<p>hoenn-region works!</p>
+<div class="region-container">
+  <h2>Hoenn Gym Leaders</h2>
+  <div class="cards-grid">
+    @for (leader of hoennService.trainers(); track leader.name) {
+      <div class="leader-card">
+        <h3>{{ leader.name }}</h3>
+        <p><strong>Badge:</strong> {{ leader.badge }}</p>
+        <p><strong>Town:</strong> {{ leader.town }}</p>
+        <p><strong>Specialty:</strong> {{ leader.specialty }}</p>
+        <h4>Pokémon Team:</h4>
+        <ul>
+          @for (pokemon of leader.pokemonTeam; track $index) {
+            <li>{{ pokemon }}</li>
+          }
+        </ul>
+      </div>
+    }
+  </div>
+</div>
