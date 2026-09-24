@@ -1,0 +1,50 @@
+.region-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.leader-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.leader-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.leader-card p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.leader-card h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.leader-card ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.leader-card li {
+  margin-bottom: 0.25rem;
+}
