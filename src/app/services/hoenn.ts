@@ -2,7 +2,7 @@ import { Injectable, signal } from '@angular/core';
 import { GymLeader } from '../gym-leader.model';
 
 @Injectable( { providedIn: 'root' })
-export class Hoenn {
+export class HoennService {
     private registry = signal([
     {
       name: 'Roxanne',
