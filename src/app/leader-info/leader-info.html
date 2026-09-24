@@ -1,0 +1,27 @@
+<div class="card">
+  <h3 [style.color]="themeColor()">{{ name() }} (Age: {{ age() }})</h3>  
+  <p class="location">📍 {{ location() }}</p>
+  <p class="badge">🏅 {{ badge() }}</p>
+
+  <div class="team-section">
+    <p class="team-title">Pokemon Team:</p>
+    <ul>
+      @for (pokemon of team(); track pokemon) {
+        <li>{{ pokemon }}</li>
+      }
+    </ul>
+  </div>
+
+<button 
+  class="action-btn" 
+  [style.backgroundColor]="themeColor()" 
+  (click)="onMonologueClick()">
+  Monologue
+</button>
+
+  @if (showText()) {
+    <p class="card-monologue">
+      "{{ monologue() }}"
+    </p>
+  }
+</div>

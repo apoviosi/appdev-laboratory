@@ -1,0 +1,18 @@
+<section class="region-section">
+  <h2>Johto Gym Leaders</h2>
+
+  <div class="card-grid">
+    @for (johtoLeader of johtoGymLeaders(); track johtoLeader.name) {
+      <app-leader-info
+      [name]="johtoLeader.name"
+      [age]="johtoLeader.age"
+      [location]="johtoLeader.location"
+      [badge]="johtoLeader.badge"
+      [team]="johtoLeader.team"
+      [monologue]="johtoLeader.monologue"
+      [themeColor]="'#1a73e8'"
+      (showMonologue)="displayMonologue($event)"
+/>
+    }
+  </div>
+</section>

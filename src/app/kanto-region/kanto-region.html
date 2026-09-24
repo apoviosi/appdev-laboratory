@@ -1,0 +1,18 @@
+<section class="region-section">
+  <h2>Kanto Gym Leaders</h2>
+
+  <div class="card-grid">
+    @for (kantoLeader of kantoGymLeaders(); track kantoLeader.name) {
+      <app-leader-info
+      [name]="kantoLeader.name"
+      [age]="kantoLeader.age"
+      [location]="kantoLeader.location"
+      [badge]="kantoLeader.badge"
+      [team]="kantoLeader.team"
+      [monologue]="kantoLeader.monologue"
+      [themeColor]="'#c5221f'"
+      (showMonologue)="displayMonologue($event)"
+    />    
+    }
+  </div>
+</section>
